@@ -4,11 +4,12 @@ import { AllMeetups } from './pages/AllMeetups';
 import { NewMeetup } from './pages/NewMeetup';
 import { Favorites } from './pages/Favorites';
 import { Layout } from './ui/Layout';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation,useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import FavoriteContextProvider from './store/FavoriteContextProvider';
 
 function App() {
+  let navigate = useNavigate();
   const DUMMY_DATA = [
     {
       id: 'm1',
@@ -41,7 +42,7 @@ function App() {
       headers: {
         "Content-Type": "application/json"
       }
-    }).then((resp) => console.log("success")).catch(err => console.log(err))
+    }).then((resp) =>{console.log("success"); navigate("/");}).catch(err => console.log(err))
 
   }
 
