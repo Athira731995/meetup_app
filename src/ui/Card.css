@@ -1,0 +1,11 @@
+.card{
+    background-color: coral;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px white;
+    left:20%;
+    right:20%;
+    max-width: 60%;
+    padding-bottom: 10px;
+    height: auto;
+}
